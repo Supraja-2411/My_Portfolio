@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Supraja Palla - Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <meta name="description" content="Supraja Palla - Full Stack Developer Portfolio showcasing web development projects and skills">
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <script defer>
+
+        // Wait for DOM to load
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const sections = document.querySelectorAll('section');
+
+            const navLinks = document.querySelectorAll('.nav-links a');
+
+
+
+            // Add scroll event listener
+
+            window.addEventListener('scroll', () => {
+
+                let current = '';
+
+                
+
+                sections.forEach(section => {
+
+                    const sectionTop = section.offsetTop;
+
+                    const sectionHeight = section.clientHeight;
+
+                    
+
+                    // Adjust the offset to account for fixed header
+
+                    if (pageYOffset >= (sectionTop - 100)) {
+
+                        current = section.getAttribute('id');
+
+                    }
+
+                });
+
+
+
+                // Update active class on nav links
+
+                navLinks.forEach(link => {
+
+                    link.classList.remove('active');
+
+                    if (link.getAttribute('href').substring(1) === current) {
+
+                        link.classList.add('active');
+
+                    }
+
+                });
+
+            });
+
+
+
+            // Handle click events on nav links
+
+            navLinks.forEach(link => {
+
+                link.addEventListener('click', function(e) {
+
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href').substring(1);
+
+                    const targetSection = document.getElementById(targetId);
+
+                    
+
+                    window.scrollTo({
+
+                        top: targetSection.offsetTop - 79, // Adjust for header height
+
+                        behavior: 'smooth'
+
+                    });
+
+                });
+
+            });
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Header Section -->
+
+    <header class="header">
+
+        <div class="logo">Portfolio</div>
+
+        <nav class="nav-links">
+
+            <a href="#home">Home</a>
+
+            <a href="#about">About</a>
+
+            <a href="#skills">Skills</a>
+
+            <a href="#projects">Projects</a>
+
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+       <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div> 
+
+    </header>
+
+
+
+    <!-- Hero Section -->
+
+    <section id="home" class="hero-section">
+
+        <div class="hero-image">
+
+            <img src="images/profile.avif" alt="Anime Girl" class="animate-profile">
+
+        </div>
+
+        <div class="hero-content">
+
+            <div class="hero-text">
+
+                <h2>Hi,</h2>
+
+                <h3>I'm Supraja Palla,</h3>
+
+                <h2>a full stack developer</h2>
+
+            </div>
+
+            <p>I'm a Full Stack Developer with a passion for building web applications that are both highly functional and visually appealing. With expertise in HTML, CSS, JavaScript, 
+
+                and back-end technologies, I thrive on tackling new challenges and delivering innovative solutions that enhance user experiences and meet business objectives.</p>
+
+            <div class="hero-buttons">
+
+                <a href="#about"><button class="btn primary">Learn More</button></a>
+
+                <a href="#contact"><button class="btn secondary">Contact Me</button></a>
+
+            </div>
+            <div class="social-icons">
+            <a href="https://www.linkedin.com/in/p-supraja-a49462190/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/Supraja-2411"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!-- About Section -->
+
+    <section id="about" class="about-section">
+
+        <h2>About Me</h2>
+
+        <h3>Full Stack Developer</h3>
+
+        <p>I am Palla Supraja, a passionate and motivated Java Full Stack Developer with a strong foundation in front-end and back-end technologies. I hold a degree in Chemical Engineering but transitioned into the IT field to pursue my interest in software development. My expertise includes creating responsive and user-friendly web applications using technologies like HTML, CSS, JavaScript, Java, JSP, Servlets, and Hibernate.
+
+            I recently completed a comprehensive Java Full Stack Development course, gaining hands-on experience in building dynamic applications like TapFoods, a food delivery platform clone. I am also skilled in tools like Git for version control and have a keen interest in creating scalable, efficient solutions.
+
+            Currently, I am seeking opportunities as a Front-End Developer, Back-End Developer or Full-Stack Developer, where I can apply my technical knowledge, adaptability, and quick learning abilities to contribute to impactful projects and grow in my professional journey.</p>
+
+    </section>
+
+
+
+    <!-- Skills Section -->
+
+    <section id="skills" class="skills-section">
+
+        <h2>My Skills</h2>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+
+                <span class="skill-emoji">💻</span>
+
+                <h3>Frontend Development</h3>
+
+                <p>I have a strong foundation in front-end development, focusing on building interactive, user-friendly, and visually appealing web applications.
+                     I am proficient in HTML, CSS, and JavaScript, which I use to create responsive layouts and dynamic components.I also focus on web performance optimization, implementing techniques like image optimization, lazy loading, and minimizing load times to enhance user experience. 
+                     Ensuring cross-browser compatibility and responsive design.</p>
+
+            </div>
+            <div class="skill-card">
+
+                <span class="skill-emoji">
+                    <i class="fa-brands fa-java fa-xl"></i>
+                </span>
+
+                <h3>Backend Development</h3>
+
+                <p>I have a solid foundation in backend development, with a focus on designing robust and efficient server-side systems. I am proficient in Java, leveraging its capabilities to create modular and scalable backend architectures. My expertise extends to JEE, Hibernate, and Spring/Spring Boot, which enable seamless development and integration of diverse services.
+                    My passion lies in optimizing backend logic to ensure reliability, scalability, and high performance.</p>
+            </div>
+
+            <div class="skill-card">
+                <span class="skill-emoji">
+                    <i class="fa-solid fa-database"></i>
+                </span>
+
+                <h3>Database Design and Optimization</h3>
+
+                <p>I have a solid foundation in database design and optimization, specializing in developing scalable and efficient systems using MySQL. My expertise lies in designing relational databases that align with application needs, ensuring data integrity and reducing redundancy through normalization.
+
+                    I focus on enhancing query performance by implementing indexing strategies and fine-tuning schemas to handle large datasets effectively. 
+                </p>
+                </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Projects Section -->
+
+    <section id="projects" class="projects-section">
+
+        <h2>Latest Projects</h2>
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <img src="images/Food Delivery Landing Page.png" alt="TapFoods">
+                <div class="project-details">
+                    <h3>TapFoods</h3>
+                    <p>Created a comprehensive food delivery platform combining a user-friendly front-end with a robust back-end for seamless ordering and cart management.</p>
+                    <a href="https://github.com/Supraja-2411/Food_Delivery-app" target="_blank"> <i class="fa-solid fa-square-arrow-up-right"></i></a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="images/portfolio-cover.png" alt="TapFoods">
+                <div class="project-details">
+                    <h3>Portfolio</h3>
+                <p>Welcome to my portfolio! Discover a showcase of projects where I blend creativity and technical skills, delivering everything from responsive web designs to dynamic, interactive applications. Take a glimpse into my journey of innovation and development.</p>
+                    <a href="https://github.com/Supraja-2411/Food_Delivery-app" target="_blank"> <i class="fa-solid fa-square-arrow-up-right"></i></a>
+                </div>
+         </div>
+         
+    </div>
+
+    </section>
+
+
+
+    <!-- Contact Section -->
+
+    <section id="contact" class="contact-section">
+
+        <h2>Contact Me!</h2>
+
+        <form  action="#" class="contact-form">
+
+            <div class="form-row">
+
+                <input type="text" placeholder="Name" required>
+
+                <input type="email" placeholder="Email" required>
+
+            </div>
+
+            <div class="form-row">
+
+                <input type="text" placeholder="Email Subject" required>
+
+                <input type="tel" placeholder="Mobile Number" required>
+
+            </div>
+
+            <div class="form-row">
+
+                <textarea placeholder="Message" required></textarea>
+
+            </div>
+
+            <button type="submit" class="btn primary">Send Message</button>
+
+        </form>
+
+    </section>
+
+
+
+    <!-- Footer -->
+
+    <footer class="footer">
+
+        <p>© 2024 SuprajaPalla. All rights reserved.</p>
+
+        <a href="#home"><button class="scroll-top">⬆️</button></a>
+
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+
+    <script>
+        // Handle image loading
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.addEventListener('load', () => {
+                    img.classList.add('loaded');
+                });
+                if (img.complete) {
+                    img.classList.add('loaded');
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
+
+
