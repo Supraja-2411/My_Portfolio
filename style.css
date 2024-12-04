@@ -448,6 +448,10 @@ section h2 {
     border: 1px solid #0098DA;
 
 }
+.contact-form h2 {
+    font-size: 2rem;
+    color: white;
+}
 
 .form-row {
     display: flex;
