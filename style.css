@@ -800,6 +800,9 @@ section h2 {
     .project-details p {
         display: none;
     }  
+     .contact-form h2 {
+        font-size: 1.8rem;
+    }
 
 }
 
@@ -838,6 +841,9 @@ section h2 {
     }
     .scroll-top{
         font-size: 25px;
+    }
+     .contact-form h2 {
+        font-size: 1.2rem;
     }
 
 }
